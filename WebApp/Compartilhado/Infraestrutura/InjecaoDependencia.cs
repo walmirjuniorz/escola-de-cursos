@@ -34,6 +34,6 @@ public static class InjecaoDependencia
         });
 
         services.AddScoped<IRepositorioInstrutor, RepositorioInstrutorEmOrm>();
-        services.AddScoped<IRepositorioAluno, RepositorioAlunoEmArquivo>();
+        services.AddScoped<IRepositorioAluno, RepositorioAlunoEmOrm>();
     }
 }

@@ -3,10 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EscolaDeCursos.WebApp.Modulos.ModuloInstrutor.Apresentacao;
 
-public class InstrutorController(
-    IRepositorioInstrutor repositorioInstrutor
-) : Controller
+public class InstrutorController : Controller
 {
+    private readonly IRepositorioInstrutor repositorioInstrutor;
+
+    public InstrutorController(IRepositorioInstrutor repositorioInstrutor)
+    {
+        this.repositorioInstrutor = repositorioInstrutor;
+    }
+
     [HttpGet]
     public ActionResult Listar()
     {

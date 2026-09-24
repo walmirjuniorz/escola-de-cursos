@@ -33,7 +33,7 @@ public static class InjecaoDependencia
             options.UseSqlServer(connectionString);
         });
 
-        services.AddScoped<IRepositorioInstrutor, RepositorioInstrutorEmArquivo>();
+        services.AddScoped<IRepositorioInstrutor, RepositorioInstrutorEmOrm>();
         services.AddScoped<IRepositorioAluno, RepositorioAlunoEmArquivo>();
     }
 }

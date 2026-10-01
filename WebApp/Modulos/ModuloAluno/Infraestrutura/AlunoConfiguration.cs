@@ -20,5 +20,22 @@ public sealed class AlunoConfiguration : IEntityTypeConfiguration<Aluno>
         builder.Property(a => a.NumeroMatricula).HasMaxLength(20).IsRequired();
 
         builder.HasIndex(a => a.NumeroMatricula).IsUnique();
+        builder
+            .Property(a => a.Nome)
+            .HasMaxLength(100)
+            .IsRequired();
+
+        builder
+            .Property(a => a.Email)
+            .HasMaxLength(255)
+            .IsRequired();
+
+        builder
+            .Property(a => a.NumeroMatricula)
+            .HasMaxLength(20)
+            .IsRequired();
+
+        builder.HasIndex(a => a.NumeroMatricula)
+            .IsUnique();
     }
 }

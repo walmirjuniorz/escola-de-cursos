@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using EscolaDeCursos.WebApp.Compartilhado.Dominio;
+using EscolaDeCursos.WebApp.Modulos.ModuloTurma.Dominio;
 
 namespace EscolaDeCursos.WebApp.Modulos.ModuloInstrutor.Dominio;
 
@@ -8,6 +9,7 @@ public class Instrutor : EntidadeBase<Instrutor>
     public string Nome { get; set; } = string.Empty;
     public string Telefone { get; set; } = string.Empty;
     public string Cpf { get; set; } = string.Empty;
+    public List<Turma> Turmas { get; set; } = [];
 
     public Instrutor()
     {

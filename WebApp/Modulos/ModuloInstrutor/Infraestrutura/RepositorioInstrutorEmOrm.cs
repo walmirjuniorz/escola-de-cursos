@@ -6,7 +6,6 @@ namespace EscolaDeCursos.WebApp.Modulos.ModuloInstrutor.Infraestrutura;
 // ORM = Object Relational Mapping
 public sealed class RepositorioInstrutorEmOrm : IRepositorioInstrutor
 {
-
     private readonly EscolaDeCursosDbContext dbContext;
 
     public RepositorioInstrutorEmOrm(EscolaDeCursosDbContext dbContext)

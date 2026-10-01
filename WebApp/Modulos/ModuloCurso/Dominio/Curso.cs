@@ -1,4 +1,5 @@
 using EscolaDeCursos.WebApp.Compartilhado.Dominio;
+using EscolaDeCursos.WebApp.Modulos.ModuloTurma.Dominio;
 
 namespace EscolaDeCursos.WebApp.Modulos.ModuloCurso.Dominio;
 
@@ -8,6 +9,7 @@ public class Curso : EntidadeBase<Curso>
     public NivelCurso Nivel { get; set; }
     public int CargaHoraria { get; set; }
     public List<Aula> Aulas { get; set; } = [];
+    public List<Turma> Turmas { get; set; } = [];
 
     public Curso()
     {

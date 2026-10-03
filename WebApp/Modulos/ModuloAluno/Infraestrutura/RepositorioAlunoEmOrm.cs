@@ -17,9 +17,7 @@ public sealed class RepositorioAlunoEmOrm : IRepositorioAluno
         dbContext.Alunos.Add(entidade); //Adiciona em memória
 
         dbContext.SaveChanges(); //Salva em banco
-        dbContext.Alunos.Add(entidade); // Adiciona em memória
 
-        dbContext.SaveChanges(); // Salva em banco
     }
 
     public bool Editar(Guid idSelecionado, Aluno entidadeAtualizada)

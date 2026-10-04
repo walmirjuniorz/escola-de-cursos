@@ -44,6 +44,67 @@ Os alunos da Academia do Programador foram contratados para desenvolver um aplic
   - CPF (11 dígitos)
 - O sistema não deve permitir o cadastro de instrutores com o mesmo telefone ou CPF.
 
+### 3. Módulo de Cursos e Aulas
+
+#### Requisitos Funcionais
+
+- O sistema deve permitir registrar novos cursos
+- O sistema deve permitir visualizar todos os cursos cadastrados
+- O sistema deve permitir editar cursos existentes
+- O sistema deve permitir excluir cursos cadastrados
+- O sistema deve permitir adicionar aulas à cursos
+- O sistema deve permitir visualizar aulas de cursos
+- O sistema deve permitir editar aulas de cursos
+- O sistema deve permitir excluir aulas de cursos
+
+#### Regras de Negócio
+
+#### Curso
+- Campos obrigatórios:
+  - Nome (2-100 caracteres)
+  - Nível do Curso (Iniciante, Intermediário, Avançado)
+  - Carga Horária (valor positivo, 2-100 horas)
+  - Aulas
+- O sistema não deve permitir cadastro de cursos com mesmo Nome
+
+#### Aula
+- Campos obrigatórios:
+  - Nome (2-100 caracteres)
+  - Duração (Minutos)
+  - Ordem (número inteiro, para ordenação)
+  - Curso (que pertence)
+- O sistema não deve permitir cadastro de aulas com o mesmo Nome ou Ordem dentro do mesmo
+curso
+
+#### 4. Módulo de Turmas e Matrículas
+
+Requisitos Funcionais
+- O sistema deve permitir registrar novos turmas
+- O sistema deve permitir visualizar todos os turmas cadastrados
+- O sistema deve permitir editar turmas existentes
+- O sistema deve permitir excluir turmas cadastrados
+- O sistema deve permitir adicionar matrículas em cursos
+- O sistema deve permitir visualizar matrículas de cursos
+- O sistema deve permitir editar matrículas de cursos
+- O sistema deve permitir excluir matrículas de cursos
+
+### Regras de Negócio
+
+#### Turma
+- Campos obrigatórios:
+  - Nome (2-100 caracteres)
+  - Curso (obrigatório)
+  - Instrutor (obrigatório)
+  - Número Máximo de Alunos (valor positivo maior que 0)
+  - Data de Início (obrigatória)
+  - Data de Término (obrigatória)
+  - Matrículas
+
+#### Matrícula
+- Campos obrigatórios:
+  - Aluno
+  - Turma
+
 ## Como utilizar
 
 1. Clone o repositório ou baixe o código fonte.

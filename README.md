@@ -1,126 +1,48 @@
-# Escola de Cursos
+# Escola De Cursos
 
 ## Projeto
 
-Desenvolvido durante o curso Fullstack da [Academia do Programador](https://www.academiadoprogramador.net) 2026
+A Escola de Cursos é um sistema web desenvolvido para auxiliar no gerenciamento de uma escola de cursos profissionalizantes, permitindo organizar e controlar as principais informações da estrutura acadêmica.
 
-Uma escola de cursos profissionalizantes oferece diversas formações presenciais e online para alunos que desejam desenvolver novas habilidades e ingressar no mercado de trabalho.
+O sistema possui módulos para gerenciamento de alunos, instrutores, cursos, aulas, turmas e matrículas, permitindo cadastrar, visualizar, editar e excluir registros. Também possibilita relacionar alunos às turmas, instrutores aos cursos e organizar as aulas pertencentes a cada curso.
 
-Os alunos da Academia do Programador foram contratados para desenvolver um aplicativo web responsável por gerenciar toda a estrutura acadêmica da escola, permitindo a gestão das informações de cursos, instrutores, turmas e matrículas.
+O projeto foi desenvolvido com o objetivo de centralizar as informações acadêmicas da escola e facilitar o gerenciamento de seus cursos e alunos.
 
-## Funcionalidades
+### Funcionalidades
 
-### 1. Módulo de Alunos
+#### Alunos
 
-#### Requisitos Funcionais
+- Cadastro, visualização, edição e exclusão
+- Validação de CPF e e-mail
+- Controle de CPF duplicado
 
-- O sistema deve permitir registrar novos alunos.
-- O sistema deve permitir visualizar todos os alunos cadastrados.
-- O sistema deve permitir editar alunos existentes.
-- O sistema deve permitir excluir alunos cadastrados.
+#### Instrutores
 
-#### Regras de Negócio
+- Cadastro, visualização, edição e exclusão
+- Validação de telefone e CPF
+- Controle de registros duplicados
 
-- Campos obrigatórios:
-  - Nome (3-100 caracteres)
-  - Email (válido)
-  - CPF (11 dígitos)
-- O sistema não deve permitir o cadastro de alunos com o mesmo CPF.
+#### Cursos e Aulas
 
-### 2. Módulo de Instrutores
+- Cadastro e gerenciamento de cursos
+- Definição do nível e carga horária
+- Cadastro e gerenciamento das aulas
+- Organização das aulas por ordem dentro do curso
 
-#### Requisitos Funcionais
+#### Turmas e Matrículas
 
-- O sistema deve permitir registrar novos instrutores.
-- O sistema deve permitir visualizar todos os instrutores cadastrados.
-- O sistema deve permitir editar instrutores existentes.
-- O sistema deve permitir excluir instrutores cadastrados.
+- Cadastro e gerenciamento de turmas
+- Associação de cursos e instrutores
+- Definição do período e limite de alunos
+- Gerenciamento das matrículas
+- Associação de alunos às turmas
 
-#### Regras de Negócio
+### Tecnologias utilizadas
+- C#
+- ASP.NET Core MVC
+- Razor / CSHTML
+- Bootstrap
+- SQL Server
+- Entity Framework Core
 
-- Campos obrigatórios:
-  - Nome (3-100 caracteres)
-  - Telefone (formatos válidos: (XX) XXXX-XXXX ou (XX) XXXXX-XXXX)
-  - CPF (11 dígitos)
-- O sistema não deve permitir o cadastro de instrutores com o mesmo telefone ou CPF.
-
-### 3. Módulo de Cursos e Aulas
-
-#### Requisitos Funcionais
-
-- O sistema deve permitir registrar novos cursos
-- O sistema deve permitir visualizar todos os cursos cadastrados
-- O sistema deve permitir editar cursos existentes
-- O sistema deve permitir excluir cursos cadastrados
-- O sistema deve permitir adicionar aulas à cursos
-- O sistema deve permitir visualizar aulas de cursos
-- O sistema deve permitir editar aulas de cursos
-- O sistema deve permitir excluir aulas de cursos
-
-#### Regras de Negócio
-
-#### Curso
-- Campos obrigatórios:
-  - Nome (2-100 caracteres)
-  - Nível do Curso (Iniciante, Intermediário, Avançado)
-  - Carga Horária (valor positivo, 2-100 horas)
-  - Aulas
-- O sistema não deve permitir cadastro de cursos com mesmo Nome
-
-#### Aula
-- Campos obrigatórios:
-  - Nome (2-100 caracteres)
-  - Duração (Minutos)
-  - Ordem (número inteiro, para ordenação)
-  - Curso (que pertence)
-- O sistema não deve permitir cadastro de aulas com o mesmo Nome ou Ordem dentro do mesmo
-curso
-
-#### 4. Módulo de Turmas e Matrículas
-
-Requisitos Funcionais
-- O sistema deve permitir registrar novos turmas
-- O sistema deve permitir visualizar todos os turmas cadastrados
-- O sistema deve permitir editar turmas existentes
-- O sistema deve permitir excluir turmas cadastrados
-- O sistema deve permitir adicionar matrículas em cursos
-- O sistema deve permitir visualizar matrículas de cursos
-- O sistema deve permitir editar matrículas de cursos
-- O sistema deve permitir excluir matrículas de cursos
-
-### Regras de Negócio
-
-#### Turma
-- Campos obrigatórios:
-  - Nome (2-100 caracteres)
-  - Curso (obrigatório)
-  - Instrutor (obrigatório)
-  - Número Máximo de Alunos (valor positivo maior que 0)
-  - Data de Início (obrigatória)
-  - Data de Término (obrigatória)
-  - Matrículas
-
-#### Matrícula
-- Campos obrigatórios:
-  - Aluno
-  - Turma
-
-## Como utilizar
-
-1. Clone o repositório ou baixe o código fonte.
-2. Abra o terminal ou o prompt de comando e navegue até a pasta raiz
-3. Utilize o comando abaixo para restaurar as dependências do projeto.
-
-   ```bash
-   dotnet restore
-   ```
-
-4. Para executar o projeto compilando em tempo real
-
-   ```bash
-   dotnet run --project WebApp/EscolaDeCursos.WebApp.csproj
-   ```
-
-## Requisitos
-
-- .NET 10.0 SDK
+Desenvolvido durante o curso Back-End da [Academia do Programador](https://www.academiadoprogramador.net) 2026

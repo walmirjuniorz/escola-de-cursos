@@ -20,17 +20,20 @@ public static class InjecaoDependencia
         IConfiguration configuration
     )
     {
-        string? connectionString = configuration.GetConnectionString("SqlServerDocker");
+        string? connectionString = configuration.GetConnectionString("SqlServer");
 
         if (string.IsNullOrWhiteSpace(connectionString))
         {
             throw new InvalidOperationException(
-                "A connection string 'SqlServerDocker' não foi encontrada."
+                "A connection string 'SqlServer' não foi encontrada."
             );
         }
 
         services.AddDbContext<EscolaDeCursosDbContext>(options =>
-            options.UseSqlServer(connectionString)
+            options.UseSqlServer(connectionString, config =>
+            {
+                config.EnableRetryOnFailure(3); // Brasil <-> Canadá = Latência 300ms
+            })
         );
 
         services.AddScoped<IRepositorioInstrutor, RepositorioInstrutorEmOrm>();

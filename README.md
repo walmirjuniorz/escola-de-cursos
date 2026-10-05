@@ -40,7 +40,7 @@ O projeto foi desenvolvido com o objetivo de centralizar as informações acadê
 ### Tecnologias utilizadas
 - C#
 - ASP.NET Core MVC
-- Razor / CSHTML
+- CSS / CSHTML
 - Bootstrap
 - SQL Server
 - Entity Framework Core

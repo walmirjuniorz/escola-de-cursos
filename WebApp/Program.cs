@@ -19,9 +19,6 @@ IDataProtectionBuilder dataProtection = builder.Services
     .SetApplicationName("EscolaDeCursos")
     .PersistKeysToFileSystem(new DirectoryInfo(dataProtectionKeysPath));
 
-if (OperatingSystem.IsWindows())
-    dataProtection.ProtectKeysWithDpapi();
-
 // Configuração do container de injeção de dependência
 builder.Services.AddInfraRepositories(builder.Configuration);
 builder.Services.AddPresentationConfig();

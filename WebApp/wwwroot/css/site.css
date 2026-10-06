@@ -1,0 +1,41 @@
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+.navbar {
+    --bs-navbar-color: #d6d6d6;
+    --bs-navbar-hover-color: #fff;
+    --bs-navbar-brand-color: #fff;
+    --bs-navbar-brand-hover-color: #fff;
+}
+
+.card {
+    --bs-card-bg: #1e1e1e;
+    --bs-card-color: #f1f1f1;
+    --bs-card-border-color: #3a3a3a;
+}
+
+.form-control,
+.form-select {
+    color-scheme: dark;
+}
+
+.table {
+    --bs-table-color: #f1f1f1;
+    --bs-table-bg: #1e1e1e;
+    --bs-table-border-color: #3a3a3a;
+    --bs-table-striped-bg: #252525;
+    --bs-table-striped-color: #f1f1f1;
+    --bs-table-hover-bg: #2b2b2b;
+    --bs-table-hover-color: #fff;
+}
+
+.text-secondary {
+    color: #adb5bd !important;
+}

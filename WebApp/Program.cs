@@ -36,6 +36,7 @@ if (app.Environment.IsDevelopment())
 }
 
 // Middlewares de roteamento
+app.UseStaticFiles();
 app.UseRouting();
 app.MapDefaultControllerRoute();
 
